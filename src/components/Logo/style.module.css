@@ -1,0 +1,4 @@
+.logo {
+  max-width: auto;
+  max-height: calc(var(--unit) * 3);
+}

@@ -1,0 +1,34 @@
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.bolder {
+  font-weight: 600;
+}
+
+.label {
+  --base: 16px;
+  font-size: var(--base);
+  line-height: 1.125;
+}
+
+.xl {
+  font-size: calc(var(--base-font) * 1.125);
+}
+
+.lg {
+  font-size: var(--base-font);
+}
+
+.md {
+  font-size: calc(var(--base-font) * 0.875);
+}
+
+.xs {
+  font-size: calc(var(--base-font) * 0.625);
+  text-transform: uppercase;
+}

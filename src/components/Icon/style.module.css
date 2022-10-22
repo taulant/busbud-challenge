@@ -1,0 +1,5 @@
+.icon {
+  max-width: calc(var(--unit) * 3);
+  max-height: calc(var(--unit) * 3);
+  overflow: hidden;
+}

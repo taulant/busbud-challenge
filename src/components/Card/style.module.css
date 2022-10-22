@@ -1,0 +1,5 @@
+.card {
+  --unit: 8px;
+  --base-font: calc(var(--unit) * 2);
+  background: white;
+}
