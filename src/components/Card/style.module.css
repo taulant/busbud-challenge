@@ -170,6 +170,10 @@ Spacing Guide
   padding-top: calc(var(--unit) * 4);
 }
 
+.pr4 {
+  padding-right: var(--unit);
+}
+
 .pb4 {
   padding-bottom: var(--unit);
 }

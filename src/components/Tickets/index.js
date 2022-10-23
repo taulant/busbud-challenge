@@ -11,13 +11,14 @@ const Tickets = ({ tickets }) => {
       })}
       style={{ marginTop: "calc(var(--unit) * -3)" }}
     >
-      {tickets.map((ticket) => (
+      {tickets.map((ticket, i) => (
         <div
           className={classNames({
             [ticketStyle.instance]: true,
+            [ticketStyle.separator]: i !== 0,
             [card.ml10]: true,
-            [card.mr4]: true,
-            [card.mt4]: true,
+            [card.pr4]: true,
+            [card.pt4]: true,
             [card.pb4]: true,
           })}
         >

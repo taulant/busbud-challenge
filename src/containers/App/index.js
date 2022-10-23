@@ -1,7 +1,7 @@
 import data from "../../data/data";
 import DepartureContainer from "../DepartureContainer";
 
-const payload = data.sellable;
+const payload = data.moreOptions;
 
 function App() {
   return <DepartureContainer payload={payload} />;
