@@ -1,3 +1,5 @@
+import classNames from "classnames";
+import card from "../Card/style.module.css";
 import Icon from "../Icon";
 import Logo from "../Logo";
 import Point from "../Point";
@@ -26,35 +28,79 @@ const Summary = ({ travel, tickets }) => {
         map={travel.to.map}
       />
       <div>
-        <span>
-          <Icon name={travel.vehicle.type} />
-          {travel.vehicle.type}
-        </span>
-        <span>
-          <Icon name="Duration" />
-          {travel.duration.time}
-        </span>
-        <span>
+        <div>
+          <span
+            className={classNames({
+              [card.label]: true,
+              [card.md]: true,
+              [card.regular]: true,
+              [card.secondary]: true,
+            })}
+          >
+            <Icon name={travel.vehicle.type} />
+            {travel.vehicle.type}
+          </span>
+          <span
+            className={classNames({
+              [card.label]: true,
+              [card.md]: true,
+              [card.regular]: true,
+              [card.secondary]: true,
+            })}
+          >
+            <Icon name="Duration" />
+            {travel.duration.time}
+          </span>
           {travel.passengerCount > 1 && (
-            <>
+            <span
+              className={classNames({
+                [card.label]: true,
+                [card.md]: true,
+                [card.regular]: true,
+                [card.secondary]: true,
+              })}
+            >
               <Icon name="Passengers" />
               {travel.passengerCount}
-            </>
+            </span>
           )}
-        </span>
-        <span>
+        </div>
+        <div>
           {travel.itinerary ? (
-            <button>
+            <button
+              className={classNames({
+                [card.button]: true,
+                [card.base]: true,
+                [card.bold]: true,
+                [card.lg]: true,
+              })}
+            >
               Itinerary <Icon name="ArrowRightPrimary" />
             </button>
           ) : tickets.length > 1 ? (
-            <label>Multiple Options</label>
+            <span
+              className={classNames({
+                [card.label]: true,
+                [card.md]: true,
+                [card.bold]: true,
+                [card.secondary]: true,
+              })}
+            >
+              Multiple Options
+            </span>
           ) : (
-            <button>
+            <button
+              className={classNames({
+                [card.button]: true,
+                [card.blueDefault]: true,
+                [card.bold]: true,
+                [card.lg]: true,
+              })}
+            >
               {tickets[0].price} <Icon name="ArrowRightBlue200" />
             </button>
           )}
-        </span>
+        </div>
       </div>
     </div>
   );

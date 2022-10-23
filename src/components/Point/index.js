@@ -1,32 +1,35 @@
 import classNames from "classnames";
-import style from "./style.module.css";
+import card from "../Card/style.module.css";
 
 const Point = ({ time, location, city, map }) => {
   return (
     <div>
       <div
         className={classNames({
-          [style.label]: true,
-          [style.bolder]: true,
-          [style.xl]: true,
+          [card.label]: true,
+          [card.bolder]: true,
+          [card.xl]: true,
+          [card.primary]: true,
         })}
       >
         {time}
       </div>
       <div
         className={classNames({
-          [style.label]: true,
-          [style.regular]: true,
-          [style.lg]: true,
+          [card.label]: true,
+          [card.regular]: true,
+          [card.lg]: true,
+          [card.secondary]: true,
         })}
       >
         {location}
       </div>
       <div
         className={classNames({
-          [style.label]: true,
-          [style.bold]: true,
-          [style.xs]: true,
+          [card.label]: true,
+          [card.bold]: true,
+          [card.xs]: true,
+          [card.tertiary]: true,
         })}
       >
         {city}
@@ -34,9 +37,10 @@ const Point = ({ time, location, city, map }) => {
       <a
         href={map}
         className={classNames({
-          [style.label]: true,
-          [style.bold]: true,
-          [style.md]: true,
+          [card.label]: true,
+          [card.bold]: true,
+          [card.md]: true,
+          [card.link]: true,
         })}
         target="_blank"
       >

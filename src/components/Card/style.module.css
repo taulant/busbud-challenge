@@ -1,5 +1,99 @@
 .card {
   --unit: 8px;
   --base-font: calc(var(--unit) * 2);
+  --color-text-primary: #20415a;
+  --color-text-secondary: #436783;
+  --color-text-tertiary: #698ca5;
+  --color-text-link: #0271ca;
+  --color-background-positive-opaque: #cffcdd;
+  --color-background-secondary-transparent: #8facc11c;
+  --color-text-over-background: #ffffff;
+  --accent-primary-400: #30b0ff; /* 10% opacity on the button */
+  --blue-50: #e6f6ff;
+  --blue-500: #0271ca;
+  --blue-100: #d1edff;
+  --color-text-positive-dark: #376556;
   background: white;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.bolder {
+  font-weight: 600;
+}
+
+.label {
+  line-height: 1.125;
+}
+
+.xl {
+  font-size: calc(var(--base-font) * 1.125);
+}
+
+.lg {
+  font-size: var(--base-font);
+}
+
+.md {
+  font-size: calc(var(--base-font) * 0.875);
+}
+
+.sm {
+  font-size: calc(var(--base-font) * 0.75);
+}
+
+.xs {
+  font-size: calc(var(--base-font) * 0.625);
+  text-transform: uppercase;
+}
+
+.primary {
+  color: var(--color-text-primary);
+}
+
+.secondary {
+  color: var(--color-text-secondary);
+}
+
+.tertiary {
+  color: var(--color-text-tertiary);
+}
+
+.positiveDark {
+  color: var(--color-text-positive-dark);
+}
+
+.link {
+  color: var(--color-text-link);
+  text-decoration: none;
+}
+
+.button {
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Codec Pro", Arial, sans-serif !important;
+  border: none;
+}
+
+.blueDefault {
+  color: var(--color-text-over-background);
+  background-color: var(--blue-500);
+}
+
+.blueDefault {
+  color: var(--color-text-over-background);
+  background-color: var(--blue-500);
+}
+
+.base {
+  color: var(--color-text-primary);
+  background-color: var(--color-background-secondary-transparent);
 }
