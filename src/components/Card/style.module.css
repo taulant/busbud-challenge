@@ -1,3 +1,39 @@
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../../assets/Fonts/Codec-Pro-Web/codec-pro-bold.woff")
+      format("woff"),
+    url("../../assets/Fonts/Codec-Pro-Web/codec-pro-bold.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../../assets/Fonts/Codec-Pro-Web/codec-pro-extrabold.woff")
+      format("woff"),
+    url("../../assets/Fonts/Codec-Pro-Web/codec-pro-extrabold.woff2")
+      format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../../assets/Fonts/Codec-Pro-Web/codec-pro-regular.woff")
+      format("woff"),
+    url("../../assets/Fonts/Codec-Pro-Web/codec-pro-regular.woff2")
+      format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../../assets/Fonts/Codec-Pro-Web/codec-pro-italic.woff")
+      format("woff"),
+    url("../../assets/Fonts/Codec-Pro-Web/codec-pro-italic.woff2")
+      format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
 .card {
   --unit: 8px;
   --base-font: calc(var(--unit) * 2);
@@ -18,6 +54,7 @@
   min-width: 360px;
   max-width: 600px;
   margin: calc(var(--unit) * 3) auto;
+  font-family: "Codec Pro", Arial, sans-serif;
 }
 
 .regular {

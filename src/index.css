@@ -1,37 +1,5 @@
-@font-face {
-  font-family: "Codec Pro";
-  src: url("./assets/Fonts/Codec-Pro-Web/codec-pro-bold.woff") format("woff"),
-    url("./assets/Fonts/Codec-Pro-Web/codec-pro-bold.woff2") format("woff2");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Codec Pro";
-  src: url("./assets/Fonts/Codec-Pro-Web/codec-pro-extrabold.woff")
-      format("woff"),
-    url("./assets/Fonts/Codec-Pro-Web/codec-pro-extrabold.woff2")
-      format("woff2");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Codec Pro";
-  src: url("./assets/Fonts/Codec-Pro-Web/codec-pro-regular.woff") format("woff"),
-    url("./assets/Fonts/Codec-Pro-Web/codec-pro-regular.woff2") format("woff2");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Codec Pro";
-  src: url("./assets/Fonts/Codec-Pro-Web/codec-pro-italic.woff") format("woff"),
-    url("./assets/Fonts/Codec-Pro-Web/codec-pro-italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-}
-
 body {
   margin: 16px;
-  font-family: "Codec Pro", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #e2eef6;
