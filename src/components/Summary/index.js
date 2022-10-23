@@ -69,7 +69,7 @@ const Summary = ({ travel, tickets }) => {
         <div
           className={classNames({
             [summary.info]: true,
-            [card.mb8]: true,
+            [card.mb4]: true,
             [card.mt4]: true,
           })}
         >
