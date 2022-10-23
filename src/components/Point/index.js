@@ -7,7 +7,7 @@ const Point = ({ time, location, city, map }) => {
       <div
         className={classNames({
           [card.label]: true,
-          [card.bolder]: true,
+          [card.bold]: true,
           [card.xl]: true,
           [card.primary]: true,
           [card.mb2]: true,
