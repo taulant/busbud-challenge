@@ -1,22 +1,10 @@
-import Departure from "../../components/Departure";
 import data from "../../data/data";
+import DepartureContainer from "../DepartureContainer";
 
 const payload = data.moreOptions;
 
 function App() {
-  return (
-    <div>
-      <Departure.Card>
-        {payload.travel.duration.note && (
-          <Departure.InfoPanel message={payload.travel.duration.note} />
-        )}
-        <Departure.Summary travel={payload.travel} tickets={payload.tickets} />
-        {payload.tickets.length > 1 && (
-          <Departure.Tickets tickets={payload.tickets} />
-        )}
-      </Departure.Card>
-    </div>
-  );
+  return <DepartureContainer payload={payload} />;
 }
 
 export default App;
