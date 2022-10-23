@@ -8,6 +8,7 @@
   --color-background-positive-opaque: #cffcdd;
   --color-background-secondary-transparent: #8facc11c;
   --color-text-over-background: #ffffff;
+  --color-border-positive-opaque: #a6f7c2;
   --accent-primary-400: #30b0ff; /* 10% opacity on the button */
   --blue-50: #e6f6ff;
   --blue-500: #0271ca;
@@ -107,10 +108,26 @@ Spacing Guide
   1.5 -> 6
   2 -> 8
   2.5 -> 10
+  3 -> 12
+  3.5 -> 14
+  4 -> 16
+
 */
+
+.pt4 {
+  padding-top: var(--unit);
+}
 
 .pt8 {
   padding-top: calc(var(--unit) * 2);
+}
+
+.pb16 {
+  padding-bottom: calc(var(--unit) * 4);
+}
+
+.pb10 {
+  padding-bottom: calc(var(--unit) * 2.5);
 }
 
 .mt2 {

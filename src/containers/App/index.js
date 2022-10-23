@@ -1,7 +1,7 @@
 import Departure from "../../components/Departure";
 import data from "../../data/data";
 
-const payload = data.sellable;
+const payload = data.fastest;
 
 function App() {
   return (
