@@ -13,7 +13,7 @@
   --blue-500: #0271ca;
   --blue-100: #d1edff;
   --color-text-positive-dark: #376556;
-  background: white;
+  margin: calc(var(--unit) * 3);
 }
 
 .regular {
@@ -75,6 +75,7 @@
 }
 
 .button {
+  padding: var(--unit) calc(var(--unit) * 1.5);
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -96,4 +97,70 @@
 .base {
   color: var(--color-text-primary);
   background-color: var(--color-background-secondary-transparent);
+}
+
+/*
+Spacing Guide
+  0.25 -> 1
+  0.5 -> 2
+  1 -> 4
+  1.5 -> 6
+  2 -> 8
+  2.5 -> 10
+*/
+
+.pt8 {
+  padding-top: calc(var(--unit) * 2);
+}
+
+.mt2 {
+  margin-top: calc(var(--unit) * 0.5);
+}
+
+.mt8 {
+  margin-top: calc(var(--unit) * 2);
+}
+
+.mr1 {
+  margin-right: calc(var(--unit) * 0.25);
+}
+
+.mr4 {
+  margin-right: var(--unit);
+}
+
+.mr6 {
+  margin-right: calc(var(--unit) * 1.5);
+}
+
+.mr8 {
+  margin-right: calc(var(--unit) * 2);
+}
+
+.mb1 {
+  margin-bottom: calc(var(--unit) * 0.25);
+}
+
+.mb2 {
+  margin-bottom: calc(var(--unit) * 0.5);
+}
+
+.mb4 {
+  margin-bottom: calc(var(--unit) * 1);
+}
+
+.mb8 {
+  margin-bottom: calc(var(--unit) * 2.5);
+}
+
+.mb10 {
+  margin-bottom: calc(var(--unit) * 2.5);
+}
+
+.ml8 {
+  margin-left: calc(var(--unit) * 2);
+}
+
+.ml10 {
+  margin-left: calc(var(--unit) * 2.5);
 }

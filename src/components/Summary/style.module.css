@@ -1,3 +1,26 @@
-.summary {
+.card {
+  border-radius: 24px;
   background: white;
+}
+
+.header,
+.points,
+.footer {
+  display: flex;
+}
+
+.header,
+.points {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
 }

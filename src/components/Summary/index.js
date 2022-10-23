@@ -1,68 +1,75 @@
 import classNames from "classnames";
 import card from "../Card/style.module.css";
 import Icon from "../Icon";
+import IconWithText from "../IconWithText";
 import Logo from "../Logo";
 import Point from "../Point";
+import summary from "./style.module.css";
 const Summary = ({ travel, tickets }) => {
   return (
-    <div>
-      <div>
+    <div className={summary.card}>
+      <div
+        className={classNames({
+          [summary.header]: true,
+          [card.pt8]: true,
+          [card.mr8]: true,
+          [card.mb10]: true,
+          [card.ml10]: true,
+        })}
+      >
         <Logo name={travel.company} />
         <div>
-          {travel.vehicle.amenities.map((amenity) => (
-            <Icon name={amenity} />
+          {travel.vehicle.amenities.map((amenity, i) => (
+            <span
+              className={
+                i < travel.vehicle.amenities.length - 1 ? card.mr1 : ""
+              }
+            >
+              <Icon name={amenity} />
+            </span>
           ))}
         </div>
       </div>
-      <Point
-        time={travel.from.time}
-        location={travel.from.location}
-        city={travel.from.city}
-        map={travel.from.map}
-      />
-      <Icon name="VeryLongArrow" />
-      <Point
-        time={travel.to.time}
-        location={travel.to.location}
-        city={travel.to.city}
-        map={travel.to.map}
-      />
-      <div>
-        <div>
-          <span
-            className={classNames({
-              [card.label]: true,
-              [card.md]: true,
-              [card.regular]: true,
-              [card.secondary]: true,
-            })}
-          >
-            <Icon name={travel.vehicle.type} />
-            {travel.vehicle.type}
-          </span>
-          <span
-            className={classNames({
-              [card.label]: true,
-              [card.md]: true,
-              [card.regular]: true,
-              [card.secondary]: true,
-            })}
-          >
-            <Icon name="Duration" />
-            {travel.duration.time}
-          </span>
+      <div
+        className={classNames({
+          [summary.points]: true,
+          [card.mr6]: true,
+          [card.mb10]: true,
+          [card.ml10]: true,
+        })}
+      >
+        <Point
+          time={travel.from.time}
+          location={travel.from.location}
+          city={travel.from.city}
+          map={travel.from.map}
+        />
+        <Icon name="VeryLongArrow" />
+        <Point
+          time={travel.to.time}
+          location={travel.to.location}
+          city={travel.to.city}
+          map={travel.to.map}
+        />
+      </div>
+      <div
+        className={classNames({
+          [summary.footer]: true,
+          [card.ml10]: true,
+          [card.mr4]: true,
+        })}
+      >
+        <div
+          className={classNames({
+            [summary.info]: true,
+            [card.mb8]: true,
+            [card.mt4]: true,
+          })}
+        >
+          <IconWithText icon={travel.vehicle.type} />
+          <IconWithText icon="Duration" text={travel.duration.time} />
           {travel.passengerCount > 1 && (
-            <span
-              className={classNames({
-                [card.label]: true,
-                [card.md]: true,
-                [card.regular]: true,
-                [card.secondary]: true,
-              })}
-            >
-              <Icon name="Passengers" />
-              {travel.passengerCount}
-            </span>
+            <IconWithText icon="Passengers" text={travel.passengerCount} />
           )}
         </div>
         <div>
@@ -73,6 +80,7 @@ const Summary = ({ travel, tickets }) => {
                 [card.base]: true,
                 [card.bold]: true,
                 [card.lg]: true,
+                [card.mb4]: true,
               })}
             >
               Itinerary <Icon name="ArrowRightPrimary" />
@@ -84,9 +92,11 @@ const Summary = ({ travel, tickets }) => {
                 [card.md]: true,
                 [card.bold]: true,
                 [card.secondary]: true,
+                [card.mb4]: true,
+                [card.mr8]: true,
               })}
             >
-              Multiple Options
+              Multiple Options:
             </span>
           ) : (
             <button
@@ -95,6 +105,7 @@ const Summary = ({ travel, tickets }) => {
                 [card.blueDefault]: true,
                 [card.bold]: true,
                 [card.lg]: true,
+                [card.mb4]: true,
               })}
             >
               {tickets[0].price} <Icon name="ArrowRightBlue200" />

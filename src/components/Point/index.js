@@ -10,6 +10,7 @@ const Point = ({ time, location, city, map }) => {
           [card.bolder]: true,
           [card.xl]: true,
           [card.primary]: true,
+          [card.mb2]: true,
         })}
       >
         {time}
@@ -20,6 +21,7 @@ const Point = ({ time, location, city, map }) => {
           [card.regular]: true,
           [card.lg]: true,
           [card.secondary]: true,
+          [card.mb1]: true,
         })}
       >
         {location}
@@ -30,6 +32,7 @@ const Point = ({ time, location, city, map }) => {
           [card.bold]: true,
           [card.xs]: true,
           [card.tertiary]: true,
+          [card.mb1]: true,
         })}
       >
         {city}
