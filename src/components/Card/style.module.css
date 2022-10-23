@@ -9,12 +9,15 @@
   --color-background-secondary-transparent: #8facc11c;
   --color-text-over-background: #ffffff;
   --color-border-positive-opaque: #a6f7c2;
+  --color-border-informative-opaque: #a3e7ff;
   --accent-primary-400: #30b0ff; /* 10% opacity on the button */
   --blue-50: #e6f6ff;
   --blue-500: #0271ca;
   --blue-100: #d1edff;
   --color-text-positive-dark: #376556;
-  margin: calc(var(--unit) * 3);
+  min-width: 360px;
+  max-width: 600px;
+  margin: calc(var(--unit) * 3) auto;
 }
 
 .regular {
@@ -122,6 +125,18 @@ Spacing Guide
   padding-top: calc(var(--unit) * 2);
 }
 
+.pt12 {
+  padding-top: calc(var(--unit) * 3);
+}
+
+.pt16 {
+  padding-top: calc(var(--unit) * 4);
+}
+
+.pb4 {
+  padding-bottom: var(--unit);
+}
+
 .pb16 {
   padding-bottom: calc(var(--unit) * 4);
 }
@@ -132,6 +147,10 @@ Spacing Guide
 
 .mt2 {
   margin-top: calc(var(--unit) * 0.5);
+}
+
+.mt4 {
+  margin-top: var(--unit);
 }
 
 .mt8 {

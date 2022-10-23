@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import card from "../Card/style.module.css";
-
+import point from "./style.module.css";
 const Point = ({ time, location, city, map }) => {
   return (
-    <div>
+    <div className={point.container}>
       <div
         className={classNames({
           [card.label]: true,

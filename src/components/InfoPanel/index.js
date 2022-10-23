@@ -7,7 +7,7 @@ const InfoPanel = ({ message }) => {
   return (
     <div
       className={classNames({
-        [infoPanel.background]: true,
+        [infoPanel.container]: true,
       })}
       style={{ marginBottom: "calc(var(--unit) * -3)" }}
     >
@@ -22,7 +22,9 @@ const InfoPanel = ({ message }) => {
           [card.pt4]: true,
         })}
       >
-        <Icon name="Thunder" />
+        <span className={card.mr1}>
+          <Icon name="Thunder" />
+        </span>
         {message}
       </span>
     </div>

@@ -15,7 +15,9 @@ const IconWithText = ({ icon, text }) => {
         [card.mr4]: true,
       })}
     >
-      <Icon name={icon} />
+      <span className={card.mr1}>
+        <Icon name={icon} />
+      </span>
       {!text ? icon : text}
     </span>
   );

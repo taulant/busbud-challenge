@@ -1,7 +1,7 @@
 import Departure from "../../components/Departure";
 import data from "../../data/data";
 
-const payload = data.fastest;
+const payload = data.moreOptions;
 
 function App() {
   return (

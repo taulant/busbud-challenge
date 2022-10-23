@@ -44,7 +44,14 @@ const Summary = ({ travel, tickets }) => {
           city={travel.from.city}
           map={travel.from.map}
         />
-        <Icon name="VeryLongArrow" />
+        <span
+          className={classNames({
+            [summary.arrow]: true,
+          })}
+        >
+          <Icon name="VeryLongArrow" />
+        </span>
+
         <Point
           time={travel.to.time}
           location={travel.to.location}
@@ -86,18 +93,19 @@ const Summary = ({ travel, tickets }) => {
               Itinerary <Icon name="ArrowRightPrimary" />
             </button>
           ) : tickets.length > 1 ? (
-            <span
+            <div
               className={classNames({
                 [card.label]: true,
                 [card.md]: true,
                 [card.bold]: true,
                 [card.secondary]: true,
+                [card.mt8]: true,
                 [card.mb4]: true,
                 [card.mr8]: true,
               })}
             >
               Multiple Options:
-            </span>
+            </div>
           ) : (
             <button
               className={classNames({
